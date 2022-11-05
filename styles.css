@@ -56,11 +56,11 @@ body{
     overflow: auto;
 }   
 
-/* .img-overlay{
+.img-overlay{
     background-color: var(--img-bg-violet);
     width: 100%;
     height: 100%;
-} */
+}
 
 
 .card-content-info{
