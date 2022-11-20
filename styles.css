@@ -59,16 +59,17 @@ main{
 }
 
 .container{
+    display: flex;
+    flex-direction: column;
     width: 300px;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5em;
     background-color: var(--card-bg-color);
     border-radius: 0 0 10px 10px;
 }
 
-
-.card-intro, .companies-data, .templates-data, .queries-data{
-    padding: 1em;
+.card-intro, .companies-data, .templates-data, .queries-data, .main-p{
+    padding: .5em;
 }
 
 .card-intro, .main-p{
@@ -82,15 +83,34 @@ section h2, .companies-p, .templates-p, .queries-p{
 }
 
 section .companies-p, .templates-p, .queries-p{
-    padding: .5rem;
+    /* padding: .5rem; */
     color: var(--stat-heading-color);
     letter-spacing: 1px;
 }
 
 section .main-p{
-    padding-bottom: 2em;
     color: var(--main-p-color);
     line-height: 25px;
+}
+
+.stats-section{
+    line-height: 1.7;
+}
+
+
+/**----------footer design-----------*/
+footer{
+    padding: 1rem;
+    position: sticky;
+    top: 100%
+}
+
+footer p, a{
+    font-family: 'Lexend Deca', sans-serif; ;
+}
+footer a{
+    text-decoration: none;
+    color: gray;
 }
 
 
@@ -108,4 +128,52 @@ section .main-p{
     color: var(--accent-color);
 }
 
+@media screen and (min-width: 620px)  {
+    footer{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 850px){
+    main{
+        flex-direction: row-reverse;
+    }
+    .container{
+        text-align: center;
+        border-radius: 10px 0 0 10px;
+        width: 470px;
+        height: 390px;
+        overflow:hidden;
+        padding: 3em;
+    }
+    .main-p, .card-intro{
+        text-align: left;
+    }
+    .main-p{
+        padding-top: 1em;
+        padding-bottom: 2em;
+    }
+    .card-intro{
+        font-size: 30px;
+        padding-left: .5rem;
+    }
+
+    .img{
+        background: url(./images/image-header-desktop.jpg);
+        height: 390px;
+        width: 475px;
+        border-radius: 0 10px 10px 0;
+        background-size: cover;
+    }
+
+    .stats-section{
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        gap: 5%;
+        line-height: 1.7;
+    }
+}
 
